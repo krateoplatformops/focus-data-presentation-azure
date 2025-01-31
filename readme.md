@@ -17,7 +17,7 @@ In the diagram, this component is the `Focus Data Presentation Composition` (in 
 ![FinOps Composition Definition Parser](_diagrams/architecture.png)
 
 ## Examples
-The configuration requires the filter for the `DataPresentationAzure` resource, and the `ScraperConfig`, to allow the data to be stored into the database:
+The configuration requires the filter for the `DataPresentationAzure` resource, and the `ScraperConfig`, to allow the data to be stored into the database (**note**: the `tableName` must be set to _pricing_table_, or consider modifying the notebook on the finops-database-handler for frontend presentation):
 ```yaml
 apiVersion: composition.krateo.io/v0-1-0
 kind: FocusTemplate
@@ -27,7 +27,7 @@ metadata:
 spec:
   filter: serviceFamily eq 'Compute' and armRegionName eq 'westeurope' and skuId eq 'DZH318Z08NRP/001B' and type eq 'Consumption'
   scraperConfig:
-    tableName: pricing_table
+    tableName: pricing_table # This table name is currently mandatory
     pollingIntervalHours: 1
     scraperDatabaseConfigRef: 
       name: cratedb-config
