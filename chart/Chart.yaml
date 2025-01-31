@@ -1,5 +1,5 @@
 apiVersion: v2
-name: focus-template
+name: focus-data-presentation-azure
 description: A chart for the creation of a FOCUS config that contains pricing information only
 
 # A chart can be either an 'application' or a 'library' chart.
