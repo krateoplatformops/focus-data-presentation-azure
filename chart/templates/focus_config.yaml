@@ -34,5 +34,5 @@ spec:
     skuId: {{ $resource.status.skuId }}
     tags:
     - key: {{ .Values.annotationKey }}
-      value: {{ $resource.status.skuArmName }}
+      value: {{ $resource.status.armSkuName }}
 {{- end }}
