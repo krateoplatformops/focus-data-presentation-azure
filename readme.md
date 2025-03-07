@@ -26,6 +26,7 @@ metadata:
   namespace: krateo-system
 spec:
   filter: serviceFamily eq 'Compute' and armRegionName eq 'westeurope' and skuId eq 'DZH318Z08NRP/001B' and type eq 'Consumption'
+  operatorFocusNamespace: krateo-system
   scraperConfig:
     tableName: pricing_table # This table name is currently mandatory
     pollingIntervalHours: 1
@@ -33,6 +34,8 @@ spec:
       name: cratedb-config
       namespace: krateo-system
 ```
+
+The operatorFocusNamespace must be set to the namespace of the [finops-operator-focus](https://github.com/krateoplatformops/finops-operator-focus).
 
 ## Configuration
 Check the Krateo FinOps Operators for additional information on how to compile the `ScraperConfig`:
