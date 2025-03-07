@@ -2,10 +2,11 @@
 
 filter: ""
 annotationKey: krateo-finops-focus-resource
+operatorFocusNamespace: krateo-system
 
 scraperConfig:
   tableName: pricing_table
-  pollingIntervalHours: 1
+  pollingInterval: "1h"
   scraperDatabaseConfigRef: 
     name: cratedb-config
     namespace: krateo-system

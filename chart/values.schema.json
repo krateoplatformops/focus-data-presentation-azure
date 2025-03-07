@@ -20,14 +20,20 @@
       "title": "global",
       "type": "object"
     },
+    "operatorFocusNamespace": {
+      "default": "krateo-system",
+      "required": [],
+      "title": "operatorFocusNamespace",
+      "type": "string"
+    },
     "scraperConfig": {
       "additionalProperties": false,
       "properties": {
-        "pollingIntervalHours": {
-          "default": 1,
+        "pollingInterval": {
+          "default": "1h",
           "required": [],
-          "title": "pollingIntervalHours",
-          "type": "integer"
+          "title": "pollingInterval",
+          "type": "string"
         },
         "scraperDatabaseConfigRef": {
           "additionalProperties": false,
@@ -61,7 +67,7 @@
       },
       "required": [
         "tableName",
-        "pollingIntervalHours",
+        "pollingInterval",
         "scraperDatabaseConfigRef"
       ],
       "title": "scraperConfig",
@@ -71,6 +77,7 @@
   "required": [
     "filter",
     "annotationKey",
+    "operatorFocusNamespace",
     "scraperConfig"
   ],
   "type": "object"

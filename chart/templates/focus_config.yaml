@@ -4,10 +4,11 @@ apiVersion: finops.krateo.io/v1
 kind: FocusConfig
 metadata:
   name: {{ include "focus-data-presentation-azure.fullname" . }}
+  namespace: {{ .Values.operatorFocusNamespace }}
 spec:
   scraperConfig:
     tableName: {{ .Values.scraperConfig.tableName }}
-    pollingIntervalHours: {{ .Values.scraperConfig.pollingIntervalHours }}
+    pollingInterval: {{ .Values.scraperConfig.pollingInterval }}
     scraperDatabaseConfigRef: 
       name: {{ .Values.scraperConfig.scraperDatabaseConfigRef.name }}
       namespace: {{ .Values.scraperConfig.scraperDatabaseConfigRef.namespace }}
