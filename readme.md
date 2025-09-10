@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository has been archived. Go here https://github.com/krateoplatformops-blueprints/azure-pricing-finops for the most recent version.
+
 # Focus Data Presentation Azure Composition
 This composition is part of the FinOps Data Presentation component, in the Krateo Composable FinOps.
 
